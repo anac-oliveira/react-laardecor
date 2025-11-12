@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "email": "laardecor@decoracao.gmail",
+      "senha": "1234"
+    }
+  ],
+  "decoracao-quarto": [
+    {
+      "id": "q1",
+      "nome": "Mesa de Cabeceira 1 Gaveta Retrô",
+      "descricao": "Mesa de cabeceira estilo retrô com 1 gaveta e acabamento em madeira natural.",
+      "categorias": ["Quarto", "Móveis"],
+      "imagens": ["mesa-cabeceira.png"],
+      "preco": 140.75
+    },
+    {
+      "id": "q2",
+      "nome": "Candelabro com Faixa de Flores e Borboletas",
+      "descricao": "Pingente decorativo com flores e borboletas, perfeito para dar charme ao quarto.",
+      "categorias": ["Quarto", "Decoração"],
+      "imagens": ["pingente-candelabro.png"],
+      "preco": 140.27
+    },
+    {
+      "id": "q3",
+      "nome": "Conjunto de Quarto com Guarda-Roupa e Cômoda",
+      "descricao": "Conjunto completo para quarto, com guarda-roupa espaçoso e cômoda combinando.",
+      "categorias": ["Quarto", "Móveis"],
+      "imagens": ["penteadeira.png"],
+      "preco": 699.90
+    },
+    {
+      "id": "q4",
+      "nome": "Guarda-Roupa Casal com Espelho",
+      "descricao": "Guarda-roupa de casal moderno com espelho e amplo espaço interno.",
+      "categorias": ["Quarto", "Móveis"],
+      "imagens": ["guarda-roupa.png"],
+      "preco": 1949.90
+    },
+    {
+      "id": "q5",
+      "nome": "Kit 3 Quadros Arte Minimalista",
+      "descricao": "Conjunto de três quadros decorativos com arte minimalista em moldura preta.",
+      "categorias": ["Quarto", "Decoração", "Quadros"],
+      "imagens": ["quadro.png"],
+      "preco": 149.90
+    },
+    {
+      "id": "q6",
+      "nome": "Penteadeira com 5 Gavetas e Espelho com Cadeira",
+      "descricao": "Penteadeira elegante com espelho grande, cinco gavetas e cadeira inclusa.",
+      "categorias": ["Quarto", "Móveis"],
+      "imagens": ["penteadeira2.png"],
+      "preco": 1040.90
+    },
+    {
+      "id": "q7",
+      "nome": "Kit de 5 Prateleiras em Madeira",
+      "descricao": "Conjunto de cinco prateleiras modernas, ideais para livros e decoração.",
+      "categorias": ["Quarto", "Organização"],
+      "imagens": ["prateleiras.png"],
+      "preco": 120.90
+    },
+    {
+      "id": "q8",
+      "nome": "Espelho Orgânico com LED Prata",
+      "descricao": "Espelho decorativo com formato orgânico e iluminação LED embutida.",
+      "categorias": ["Quarto", "Espelhos"],
+      "imagens": ["espelho-orgânico.png"],
+      "preco": 410.90
+    },
+    {
+      "id": "q9",
+      "nome": "Tapete Decorativo para Quarto",
+      "descricao": "Tapete macio e moderno, ideal para decorar e deixar o ambiente aconchegante.",
+      "categorias": ["Quarto", "Decoração", "Tapetes"],
+      "imagens": ["tapete.png"],
+      "preco": 210.00
+    }
+  ]
+}
