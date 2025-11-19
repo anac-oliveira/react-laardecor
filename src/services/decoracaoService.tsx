@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Decoracao } from "../type/decoracao";
+import type { Decoracao } from "../Types/Decoracao";
 
 export const getDecoracao = async (): Promise<Decoracao[]> => {
     try {

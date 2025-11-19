@@ -1,0 +1,25 @@
+header {
+    background-color: #657047;
+}
+
+.container-header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.icone-voltar {
+    height: 60px;
+}
+
+.icone-logo {
+    height: 80px;
+    display: flex;
+}
+
+
+.icone-login {
+    height: 50px;
+}

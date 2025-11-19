@@ -1,0 +1,31 @@
+.cards-produto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+
+.card-produto {
+    width: 350px;
+    height: 563px;
+    background-color: #657047;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 100px;
+    box-shadow: #00000025;
+}
+
+.card-produto img {
+    width: 100%;
+}
+
+
+.card-produto p {
+    padding: 0 10px;
+    font-size: 17px;
+    font-family: "Be Vietnam Pro";
+    margin: 30px;
+    color: white;
+}
