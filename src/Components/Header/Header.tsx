@@ -1,41 +1,49 @@
 import Navbar from 'react-bootstrap/Navbar';
 import './Header.css';
+import Nav from 'react-bootstrap/esm/Nav';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Header() {
+const [pesquisa, setPesquisa] = useState <string>("");
+const navigate = useNavigate();
+
+const handleSearch = () => {
+    if (!pesquisa.trim()) return;
+    navigate(`/produtos/pequisa?query=${encodeURIComponent(pesquisa)}`);
+    setPesquisa("");
+    
+}
+
+const handleKeyDown = (evento: React.KeyboardEvent<HTMLInputElement>) => {
+    if (evento.key === 'Enter') {
+        handleSearch();
+    }
+};
+
     return (
         <header>
             <Navbar expand="md" className="container container-header">
-                <Navbar.Collapse id="basic-navbar-nav" 
-                <svg class="icone-voltar" viewBox="0 0 111 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M11.1 23.0375C11.1 21.0217 12.9558 19.4 15.2625 19.4C17.5692 19.4 19.425 21.0217 19.425 23.0375V73.9625C19.425 75.9783 17.5692 77.6 15.2625 77.6C12.9558 77.6 11.1 75.9783 11.1 73.9625V23.0375ZM34.514 51.0766C32.8837 49.6519 32.8837 47.3481 34.514 45.9386L58.1015 25.3109C59.7319 23.8863 62.3681 23.8863 63.9811 25.3109C65.594 26.7356 65.6114 29.0394 63.9811 30.4489L47.5045 44.8473H95.7375C98.0442 44.8473 99.9 46.4691 99.9 48.4848C99.9 50.5006 98.0442 52.1223 95.7375 52.1223H47.5045L63.9811 66.5208C65.6114 67.9455 65.6114 70.2492 63.9811 71.6588C62.3508 73.0683 59.7145 73.0834 58.1015 71.6588L34.514 51.0766Z"
-                    fill="#FACC14" />
-                 </svg>
-                    <img className="icone-logo" src="../assets/img/laar logo.png" alt="" />
-
-
-
-                    <svg className="icone-login" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_146_104)">
-                            <path
-                                d="M47.5371 45.7738C44.9041 41.1988 39.9598 38.125 34.3125 38.125H26.6875C21.0402 38.125 16.0959 41.1988 13.4629 45.7738C17.6566 50.4441 23.7328 53.375 30.5 53.375C37.2672 53.375 43.3434 50.4322 47.5371 45.7738ZM0 30.5C0 22.4109 3.21338 14.6531 8.93324 8.93324C14.6531 3.21338 22.4109 0 30.5 0C38.5891 0 46.3469 3.21338 52.0668 8.93324C57.7866 14.6531 61 22.4109 61 30.5C61 38.5891 57.7866 46.3469 52.0668 52.0668C46.3469 57.7866 38.5891 61 30.5 61C22.4109 61 14.6531 57.7866 8.93324 52.0668C3.21338 46.3469 0 38.5891 0 30.5ZM30.5 32.4062C32.7751 32.4062 34.9569 31.5025 36.5657 29.8938C38.1744 28.2851 39.0781 26.1032 39.0781 23.8281C39.0781 21.5531 38.1744 19.3712 36.5657 17.7625C34.9569 16.1538 32.7751 15.25 30.5 15.25C28.2249 15.25 26.0431 16.1538 24.4344 17.7625C22.8256 19.3712 21.9219 21.5531 21.9219 23.8281C21.9219 26.1032 22.8256 28.2851 24.4344 29.8938C26.0431 31.5025 28.2249 32.4062 30.5 32.4062Z"
-                                fill="#FACC14" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_146_104">
-                                <rect width="61" height="61" fill="white" />
-                            </clipPath>
-                        </defs>
-
-                    </svg>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto conteudo-nav">
+                        {/*1/3*/}
+                        <Nav.Item>
+                            <svg className="icone-voltar" viewBox="0 0 111 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.1 23.0375C11.1 21.0217 12.9558 19.4 15.2625 19.4C17.5692 19.4 19.425 21.0217 19.425 23.0375V73.9625C19.425 75.9783 17.5692 77.6 15.2625 77.6C12.9558 77.6 11.1 75.9783 11.1 73.9625V23.0375ZM34.514 51.0766C32.8837 49.6519 32.8837 47.3481 34.514 45.9386L58.1015 25.3109C59.7319 23.8863 62.3681 23.8863 63.9811 25.3109C65.594 26.7356 65.6114 29.0394 63.9811 30.4489L47.5045 44.8473H95.7375C98.0442 44.8473 99.9 46.4691 99.9 48.4848C99.9 50.5006 98.0442 52.1223 95.7375 52.1223H47.5045L63.9811 66.5208C65.6114 67.9455 65.6114 70.2492 63.9811 71.6588C62.3508 73.0683 59.7145 73.0834 58.1015 71.6588L34.514 51.0766Z"
+                                    fill="#FACC14" />
+                            </svg>
+                        </Nav.Item>
+                        {/*2/3*/}
+                        <Nav.Item>
+                            <img className="icone-logo" src="../assets/img/laar logo.png" alt="" />
+                        </Nav.Item>
+                        {/*3/3- tinha que ter o input pesquisa*/} 
+                    </Nav>
                 </Navbar.Collapse>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
             </Navbar>
-
-
-
-
-
         </header>
 
     )

@@ -1,0 +1,160 @@
+/* banner */
+.banner {
+    background-image: url(../assets/img/sala\ inicio\ \(1\).png);
+    width: 100%;
+    aspect-ratio: 3.2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+
+/* cards */
+.cards {
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: auto;
+}
+
+.linha1,
+.linha2,
+.linha3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+    gap: 1rem;
+}
+
+.area,
+.cozinha,
+.banheiro,
+.quarto {
+    /* margin-right: 30px; */
+}
+
+
+.quarto {
+    width: 833px;
+    aspect-ratio: 2.19;
+}
+
+.quarto-inf {
+    width: 588px;
+    aspect-ratio: 1.55;
+}
+
+.banheiro {
+    width: 342px;
+    aspect-ratio: 0.91;
+}
+
+.cozinha {
+    width: 342px;
+    aspect-ratio: 0.92;
+}
+
+.sala {
+    width: 704px;
+    aspect-ratio: 1.90;
+}
+
+.area {
+    width: 587px;
+    aspect-ratio: 1.36;
+}
+
+.escrit {
+    width: 832px;
+    aspect-ratio: 1.93;
+}
+
+.escrit img,
+.area img,
+.sala img,
+.cozinha img,
+.banheiro img,
+.quarto-inf img,
+.quarto img {
+    width: 100%;
+}
+
+img {
+    cursor: pointer;
+}
+
+
+
+
+/* whatesapp */
+.whatsapp {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: transform 0.5s ease-in-out,
+        filter 0.5s ease-in-out;
+    z-index: 99;
+}
+
+.whatsapp img {
+    width: 80px;
+    filter: drop-shadow(0 5px 1px #00000025);
+}
+
+.whatsapp:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 10px 2px #00000025);
+}
+
+
+
+/* rodape */
+
+
+.rodape {
+
+    height: 87px;
+    background-color: var(--corprincipal);
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.envelope {
+    width: 40px;
+    cursor: pointer;
+}
+
+.rodape p {
+    font-size: 30px;
+    font-family: "Abel", system-ui;
+    text-align: left;
+    color: #FACC14;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+@media(max-width: 550px) {
+
+    .fixo {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .rolagem {
+        width: 70px;
+        margin-left: 50%;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+    }
+}
