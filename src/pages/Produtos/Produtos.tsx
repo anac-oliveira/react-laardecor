@@ -1,4 +1,4 @@
-import whatszapp from '../../assets/img/whats.png';
+import whatsapp from '../../assets/img/what.png';
 import './Produtos.css';
 import { useEffect, useState } from 'react';
 import type { Decoracao } from '../../Types/Decoracao';
@@ -69,10 +69,10 @@ export default function Produtos() {
                     </div>
                 </section>
 
-                <a className="whatsapp" href="https://wa.me/5511999998888?text=Olá%20quero%20saber%20mais!" target="_blank" >
-                    <img src={whatszapp} alt="" />
+                <a className="whatsapp" href="https://wa.me/5511999999999?text=Olá%20quero%20saber%20mais!" target="_blank">
+            <img src={whatsapp} alt=""/>
 
-                </a>
+        </a>
 
             </main >
         </>
