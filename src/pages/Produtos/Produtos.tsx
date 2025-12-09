@@ -45,7 +45,7 @@ export default function Produtos() {
             <main>
                 <Carrosel />
 
-                <section className="container">
+                <section className="container-laardecor ">
                     <h1 className="acessivel">produtos do quarto</h1>
                     <div className="titulo">
                         <span>Quarto</span>

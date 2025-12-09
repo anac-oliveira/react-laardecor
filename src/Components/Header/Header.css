@@ -1,18 +1,18 @@
 /* HEADER */
 header {
     background-color: #657047;
-    height: 85px;
+    /* height: 85px; */
 }
 
 .container-header {
-    height: 80px;
+    /* height: 80px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-.icone-voltar {
+.icone-home {
     height: 42px;
     fill: #FACC14;
     cursor: pointer;
@@ -22,6 +22,14 @@ header {
     height: 90px;
     cursor: pointer;
 
+}
+
+.conteudo-nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 75px;
 }
 
 
