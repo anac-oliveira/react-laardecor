@@ -13,7 +13,7 @@ header {
 }
 
 .icone-home {
-    height: 42px;
+    height: 50px;
     fill: #FACC14;
     cursor: pointer;
 }
@@ -21,6 +21,7 @@ header {
 .icone-logo {
     height: 90px;
     cursor: pointer;
+    margin-inline: 50px;
 
 }
 
@@ -67,4 +68,16 @@ header {
     display: none;
     z-index: 2;
 
+}
+
+@media screen and (max-width: 768px) {
+  .me-auto{
+    align-items: end;
+  }
+  .icone-logo{
+    margin: 1rem 0;
+  }
+  .icone-home{
+    margin-bottom: 5px;
+  }
 }

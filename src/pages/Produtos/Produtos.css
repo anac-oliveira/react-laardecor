@@ -83,7 +83,7 @@ body {
     background-color: var(--corBackground);
     width: 200px;
     height: 4px;
-    border: none;
+    border: none;   
     border-radius: 2px;
     margin: 2px;
     box-shadow: 0 4px 4px 2px #00000025;
@@ -103,7 +103,7 @@ body {
 .card-produto {
     width: 30%;
     max-width: 350px;
-    height: 590px;
+    /* height: 590px; */
     background-color: #657047;
     border-radius: 30px;
     text-align: center;
@@ -127,14 +127,14 @@ body {
     color: white;
 
 }
-
-.valor {
+/* 
+.card-produto .valor {
     font-family: "Be Vietnam Pro";
     background-color: #FACC14;
     border-radius: 7px;
     font-size: 20px;
     padding: 5px;
-}
+} */
 
 /* WHATSAPP */
 .whatsapp {
@@ -155,7 +155,9 @@ body {
     filter: drop-shadow(0 7px 2px #00000025);
 }
 
-
+.algo{
+    
+}
 /* RODAPE */
 footer {
     width: 100%;
@@ -218,15 +220,6 @@ footer p {
 
 }
 
-@media screen and (max-width: 900px) {
-
-    /* MEDIA */
-    /* .container-laardecor {
-        width: 95%;
-    } */
-
-
-}
 
 @media screen and (max-width: 768px) {
     .banner {
@@ -269,7 +262,7 @@ footer p {
     }
 
     .titulo hr {
-        width: 120px;
+        width: 295px;
     }
 
     .card-produto {
@@ -283,9 +276,9 @@ footer p {
         margin: 15px;
     }
 
-    .valor {
+    /* .card-produto .valor {
         font-size: 23px;
-    }
+    } */
 }
 
 
@@ -301,7 +294,7 @@ footer p {
     }
 
     .titulo hr {
-        width: 120px;
+        width: 295px;
     }
 
     .card-produto {
@@ -315,10 +308,10 @@ footer p {
         margin: 23px;
     }
 
-    .valor {
+    /* .card-produto .valor {
         font-size: 23px;
         padding: 5px;
-    }
+    } */
 }
 
 

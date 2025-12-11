@@ -1,5 +1,5 @@
 import { formatosService } from '../../services/formatosService';
-import type { CardProdutoProps } from '../../Types/CardProdutosProps';
+import type { CardProdutoProps } from '../../Types/CardProdutoProps';
 import './CardProduto.css';
 import decoracao_default from "../../assets/img/Pagina-quarto/sofa-icone.jpg"
 

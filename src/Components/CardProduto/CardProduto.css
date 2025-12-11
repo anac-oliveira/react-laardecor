@@ -56,7 +56,7 @@
     color: white;
 }
 
-.valor {
+.card-produto .valor {
     font-family: "Be Vietnam Pro";
     background-color: #FACC14;
     border-radius: 7px;
@@ -111,7 +111,7 @@
         margin: 15px;
     }
 
-    .valor {
+    .card-produto .valor {
         font-size: 23px;
     }
 }
@@ -143,7 +143,7 @@
         margin: 23px;
     }
 
-    .valor {
+    .card-produto .valor {
         font-size: 23px;
         padding: 5px;
     }

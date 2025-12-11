@@ -6,12 +6,15 @@ import { getDecoracao } from '../../services/decoracaoService';
 import CardProduto from '../../Components/CardProduto/CardProduto';
 import Carrosel from '../../Components/Carrosel/Carrosel';
 import Header from '../../Components/Header/Header';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
+
+import Footer from '../../Components/Footer/Footer';
 
 export default function Produtos() {
 
     const [decoracao, setDecoracao] = useState<Decoracao[]>([]);
     const location = useLocation();
+    const { categoria } = useParams<{ categoria: string }>();
 
     const parametrosPesquisados = new URLSearchParams(location.search);
     const termo_Pesquisado = parametrosPesquisados.get('query');
@@ -20,15 +23,22 @@ export default function Produtos() {
         try {
             const dados = await getDecoracao();
             // console.log("Lista de Decoração vinda da API: ", dados);
-            if (termo_Pesquisado) {
+            if (categoria) {
+                const dados_filtrados = dados.filter(d => d.categorias.some(cat => cat.toLowerCase() === categoria.
+                    toLowerCase()));
+                setDecoracao(dados_filtrados);
+            }
+            else if (termo_Pesquisado) {
                 const dados_filtrados = dados.filter(d =>
                     d.nome.toLowerCase().includes(termo_Pesquisado.toLowerCase()) ||
                     d.descricao.toLowerCase().includes(termo_Pesquisado.toLowerCase()) ||
                     d.categorias.some(cat => cat.toLowerCase().includes(termo_Pesquisado.toLowerCase()))
 
                 );
+                setDecoracao(dados_filtrados);
             } else
                 setDecoracao(dados);
+
         } catch (error) {
             console.error("Erro ao executar getDecoracao: ", error);
         }
@@ -48,7 +58,15 @@ export default function Produtos() {
                 <section className="container-laardecor ">
                     <h1 className="acessivel">produtos do quarto</h1>
                     <div className="titulo">
-                        <span>Quarto</span>
+                        <span>
+                            {
+                                categoria
+                                ?categoria.charAt(0).toUpperCase() + categoria.slice(1).toLowerCase()
+                                :termo_Pesquisado
+                                ?`Resultados para: "${termo_Pesquisado}"`
+                                :"Nenhum filtro aplicado"
+                                 }
+                        </span>
                         <hr />
                     </div>
 
@@ -59,10 +77,15 @@ export default function Produtos() {
                                     key={d.id}
                                     descricao={d.descricao}
                                     preco={d.preco}
-                                    imagem={d.imagens[0] ?? ""}
-                                />
+                                    imagem={d.imagens[0] ?? ""} nome={''}                                />
 
                             ))
+                        }
+                        {
+                            decoracao.length == 0 &&
+                            <div className='algo' ><h3>O termo pesquisado<br/>não foi encontrado</h3>
+                            <img  alt="foto_termo_nao_encontrado"/>
+                            </div>
                         }
 
 
@@ -70,11 +93,12 @@ export default function Produtos() {
                 </section>
 
                 <a className="whatsapp" href="https://wa.me/5511999999999?text=Olá%20quero%20saber%20mais!" target="_blank">
-            <img src={whatsapp} alt=""/>
+                    <img src={whatsapp} alt="" />
 
-        </a>
+                </a>
 
             </main >
+            <Footer/>
         </>
     )
 }
