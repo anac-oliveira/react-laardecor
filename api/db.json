@@ -78,5 +78,11 @@
       "imagens": ["tapete.png"],
       "preco": 210.00
     }
+  ],
+
+  "decoracao-area": [
+    {
+      
+    }
   ]
 }

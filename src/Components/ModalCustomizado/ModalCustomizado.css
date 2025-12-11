@@ -1,7 +1,7 @@
 .botaoModalCancelar{
   padding: 10px 10px;
   border-radius: 10px;
-  background-color: #FEF8E8;
+  background-color: #CBD7AD;
   font-size: 24px;
   font-family: "Abel", system-ui;
   box-shadow: 0 4px 4px 0 #000025;
@@ -11,7 +11,7 @@
 .botaoSubmitModal{
   padding: 10px 100px;
   border-radius: 10px;
-  background-color: #657047;
+  background-color: #FACC14;
   font-size: 24px;
   font-family: "Abel", system-ui;
   box-shadow: 0 4px 4px 0 #000025;

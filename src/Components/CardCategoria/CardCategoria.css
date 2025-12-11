@@ -1,18 +1,21 @@
 /* card-categoria */
 .cards-categoria {
-
     width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 100px 0;
     margin-bottom: auto;
+}
+
+.cards-categoria img {
+    border-radius: 20px;
 }
 
 .linha1,
 .linha2,
 .linha3 {
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-bottom: 15px;
     width: 100%;
 
 }

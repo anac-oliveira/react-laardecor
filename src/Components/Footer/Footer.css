@@ -11,6 +11,12 @@
     cursor: pointer
 }
 
+.envelope {
+    width: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
 .rodape p {
     font-size: 30px;
     font-family: "Abel", system-ui;

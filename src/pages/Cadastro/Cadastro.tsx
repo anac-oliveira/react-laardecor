@@ -61,15 +61,16 @@ export default function Cadastro() {
         }
     }
 
+
     const carregarImagem = (img: ChangeEvent<HTMLInputElement>) => {
         const file = img.target.files?.[0];
         if (file?.type.includes("image")) {
             setImagem(file);
-            setBgImageInputColor("#5cb85c");
+            setBgImageInputColor(" #5cb85c");
         }
         else {
             setImagem(undefined);
-            setBgImageInputColor("#ff2c2c");
+            setBgImageInputColor(" #ff2c2c");
         }
     }
 

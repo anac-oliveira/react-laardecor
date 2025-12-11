@@ -1,11 +1,11 @@
 /* HEADER */
 header {
     background-color: #657047;
-    /* height: 85px; */
+    height: 85px;
 }
 
 .container-header {
-    /* height: 80px; */
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +13,7 @@ header {
 }
 
 .icone-home {
-    height: 50px;
+    height: 42px;
     fill: #FACC14;
     cursor: pointer;
 }
@@ -21,16 +21,7 @@ header {
 .icone-logo {
     height: 90px;
     cursor: pointer;
-    margin-inline: 50px;
 
-}
-
-.conteudo-nav{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin-inline: 75px;
 }
 
 
@@ -70,14 +61,29 @@ header {
 
 }
 
+    /*MEDIASS*/
 @media screen and (max-width: 768px) {
-  .me-auto{
-    align-items: end;
-  }
-  .icone-logo{
-    margin: 1rem 0;
-  }
-  .icone-home{
-    margin-bottom: 5px;
-  }
+    .box-busca {
+        position: absolute;
+        overflow-y: hidden;
+        top: -100px;
+        z-index: 2;
+        right: 30px;
+        transition: .5s;
+        width: 80%;
+        right: 50px;
+    }
+
+    .menu-barras {
+        display: block;
+        right: 0;
+        fill: #FACC14;
+    }
+
+
+    .icone-voltar {
+        display: none;
+    }
+
+
 }

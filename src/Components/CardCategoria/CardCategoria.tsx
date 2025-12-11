@@ -1,4 +1,4 @@
-import type { CardCategoriaProps } from '../../types/CardCategoriaProps'
+import type { CardCategoriaProps } from '../../Types/CardCategoriaProps';
 import './CardCategoria.css'
 import { Link } from 'react-router-dom'
 
